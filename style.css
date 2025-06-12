@@ -1,0 +1,104 @@
+body{
+    background-color: rgb(28, 24, 24);
+}
+.logito {
+    height: 80px; /* ajusta según lo que necesites */
+    margin-right: 20px; /* espacio entre logo y texto */
+    align-self: center; /* alinea con el texto si usas flex */
+}
+
+.principal {
+    background-color: rgb(35, 33, 33);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 15px; /* Menos espacio alrededor */
+    margin: 0;
+}
+
+h1 {
+    color: #ff6600; /* naranja fuego */
+    font-family: "Arial", sans-serif;
+    font-size: 3em; /* Tamaño más pequeño */
+    text-shadow: 
+        0 0 1px #ff6600,
+        0 0 3px #ff6600,
+        0 0 6px #ff3300;
+    animation: parpadeo 3s infinite;
+}
+
+/* Parpadeo más sutil */
+@keyframes parpadeo {
+    0%, 80%, 100% {
+        text-shadow: 
+            0 0 1px #ff6600,
+            0 0 3px #ff6600,
+            0 0 6px #ff3300;
+    }
+    81%, 90% {
+        text-shadow: none;
+    }
+}
+
+
+/* Animación con menor parpadeo */
+@keyframes parpadeo {
+    0%, 80%, 100% {
+        text-shadow: 
+            0 0 2px #ff6600,
+            0 0 5px #ff6600,
+            0 0 10px #ff3300;
+    }
+    81%, 90% {
+        text-shadow: none;
+    }
+}
+
+footer{
+    background-color: rgb(35, 33, 33);
+    color: rgb(255, 255, 255);
+    height: 150px;
+    width: auto;
+    text-align: center;
+}
+.galeria {
+    display: flex;
+    width: 750px; /* antes 500px */
+    height: 450px; /* antes 300px */
+    margin: auto;
+    gap: 12px; /* espacio entre imágenes para evitar pegado */
+}
+  .galeria img {
+      width: 0;
+      flex-grow: 1;
+      object-fit: cover;
+      filter: brightness(80%);
+      transition: width 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
+      cursor: pointer;
+      border-radius: 14px;
+      user-select: none;
+  }
+  .galeria img:hover {
+      width: 750px; /* antes 600px */
+      opacity: 1;
+      filter: brightness(130%);
+  }
+  /* Responsive para móviles: ajustar tamaño */
+  @media (max-width: 640px) {
+      .galeria {
+          width: 100%;
+          height: 300px;
+      }
+      .galeria img:hover {
+          width: 100%;
+      }
+  }
+.galw{
+    background-image: url(./tapiceriaflowlogo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
